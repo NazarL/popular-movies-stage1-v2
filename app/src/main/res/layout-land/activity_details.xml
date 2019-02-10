@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imv_poster_thumbnail"
+            android:layout_width="@dimen/poster_width_185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/movie_poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txv_movie_title" />
+
+        <TextView
+            android:id="@+id/txv_movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginEnd="@dimen/margin_12dp"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/txt_movie_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_vote_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_12dp"
+            android:layout_marginLeft="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginEnd="@dimen/margin_4dp"
+            android:layout_marginRight="@dimen/margin_4dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/txt_vote_average"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toStartOf="@+id/txv_user_rating"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="@id/txv_user_rating"
+            app:layout_constraintStart_toEndOf="@+id/imv_poster_thumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/txv_movie_title" />
+
+        <TextView
+            android:id="@+id/txv_user_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:layout_marginLeft="@dimen/margin_4dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/number"
+            app:layout_constraintStart_toEndOf="@+id/tv_vote_average"
+            app:layout_constraintTop_toBottomOf="@+id/txv_movie_title" />
+
+        <TextView
+            android:id="@+id/tv_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/txt_release_date"
+            app:layout_constraintBottom_toTopOf="@+id/txv_overview"
+            app:layout_constraintStart_toStartOf="@+id/tv_vote_average"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vote_average"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <TextView
+            android:id="@+id/txv_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:layout_marginLeft="@dimen/margin_4dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/date"
+            app:layout_constraintBottom_toTopOf="@+id/txv_overview"
+            app:layout_constraintStart_toEndOf="@+id/tv_release_date"
+            app:layout_constraintTop_toBottomOf="@+id/txv_user_rating"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txv_overview"
+            android:layout_width="@dimen/landscape_overview_w360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/txt_movie_overview"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@+id/tv_release_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_release_date" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
